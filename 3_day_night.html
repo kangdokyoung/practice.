@@ -3,36 +3,49 @@
 <head>
     <title>연습용 사이트</title>
     <meta charset="utf-8">
+    <script>
+        var Links ={
+            SetColor:function(color){
+            var links = document.querySelectorAll('a');
+                var i = 0;
+                while(i<links.length){
+                    links[i].style.color = color; 
+                    i = i+1;
+                }
+            }
+        }
+        var Body ={
+            setColor:function(color){
+                document.querySelector('body').style.color = color;
+            },
+            setBackgroundColor:function(color){
+                document.querySelector('body').style.backgroundColor = color;
+            }
+        }
+        function nightdayhandler(self){            
+            if (self.value === 'night'){
+                Body.setBackgroundColor('black');
+                Body.setColor('white');
+                self.value = 'day'
+                
+                Links.SetColor('powderblue');
+            } else{
+                Body.setBackgroundColor('white');
+                Body.setColor('black');  
+                self.value = 'night'
+
+                Links.SetColor('blue');
+            }
+            
+        }
+    </script>
 </head>
 
 <body>
     <h1><a href="index.html">HTML</a></h1>
     
     <input type="button" value="night" onclick="
-        var target = document.querySelector('body');
-        if (this.value === 'night'){
-            target.style.backgroundColor = 'black';
-            target.style.color = 'white';
-            this.value = 'day'
-            
-            var links = document.querySelectorAll('a');
-            var i = 0;
-            while(i<links.length){
-                links[i].style.color='powderblue';
-                i = i+1;
-            }
-        } else{
-            target.style.backgroundColor = 'white';
-            target.style.color = 'black';  
-            this.value = 'night'
-
-            var links = document.querySelectorAll('a');
-            var i = 0;
-            while(i<links.length){
-                links[i].style.color='blue';
-                i = i+1;
-            }
-        }
+        nightdayhandler(this);
     ">
     <ol>
         <li><a href="1.html">기술소개</a></li>
@@ -43,8 +56,6 @@
 
     <h2>하이퍼텍스트와 속성</h2>
     하이퍼텍스트를 사용합니다.
-
-
 
 
 </body>
