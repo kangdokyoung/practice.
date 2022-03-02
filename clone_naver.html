@@ -11,7 +11,7 @@
             .input_text{
                 width: 474px;
                 height: 24px;
-                border: 1px solid #19ce60;                
+                border: 2px solid #19ce60;                
                 padding: 13px 15px;
                 font-size: 18px;
             }
@@ -36,6 +36,9 @@
                 height: 52px;
                 border: 0px;
             }
+            .nav_list{
+                float: left;
+            }
 
         </style>
     </head>
@@ -47,7 +50,16 @@
             maxlength="255" class="input_text">
             <i class="fas fa-search"></i>
             <i class="fas fa-keyboard"></i>
-            <button id="search_btn" type="submit" title="검색" tabindex="3" class="btn_submit">검색</button>
-        </div>        
+            <button id="search_btn" type="submit" title="검색" class="btn_submit">검색</button>
+        </div> 
+        <div class="group_nav">
+            <ul>
+                <li class="nav_list">메일</li>
+                <li class="nav_list">카페</li>
+                <li class="nav_list">블로그</li>
+                <li class="nav_list">지식iN</li>
+                <li class="nav_list">쇼핑</li>
+            </ul>
+        </div>       
     </body>
 </html>
