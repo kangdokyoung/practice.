@@ -4,6 +4,9 @@
         <meta charset="utf-8">
         <title>NAVER</title>
         <style>
+            *{
+                box-sizing: border-box;
+            }
             .logo{
                 background-image:url(https://s.pstatic.net/static/www/img/uit/sp_main_dba1af.png);
                 width: 222px;
@@ -47,7 +50,33 @@
             a{
                 text-decoration: none;
             }
-
+            .search_area{
+                position: absolute;
+                left: 268px;
+                margin-top: -55px;
+            }
+            .search_area .input_text{
+                width: 444px;
+                height: 24px;
+                padding: 13px 15px;
+                margin: 1px;
+                background-color: #fff;
+                font-size: 18px;
+                line-height: 24px;
+                color: #000;
+                font-weight: 700;
+                outline: 0;
+            }
+            .search_area .btn_submit{
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                width: 56px;
+                background-color: #19ce60;
+                border-radius: 0 2px 2px 0;
+                cursor: pointer;
+            }
         </style>
     </head>
     <body>
@@ -58,7 +87,11 @@
                 </a>
             </div>
             <div class="search_area" id="search">
-                
+                <input type="text" maxlength="225" class="input_text" placeholder="검색어를 입력해주세요."
+                >
+                <button>
+                    <i class="btn_submit"></i>
+                </button>
             </div>
         </div>
         <div class="group_nav">
