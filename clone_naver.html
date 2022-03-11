@@ -4,9 +4,6 @@
         <meta charset="utf-8">
         <title>NAVER</title>
         <style>
-            *{
-                box-sizing: border-box;
-            }
             .logo{
                 background-image:url(https://s.pstatic.net/static/www/img/uit/sp_main_dba1af.png);
                 width: 222px;
@@ -41,9 +38,6 @@
                 padding: 10px ;
                 margin-top: 0px;
             }
-            .group_nav{
-                padding: 11px 270px 11px 0;
-            }
             .blind{
                 overflow: hidden;
             }
@@ -53,19 +47,18 @@
             .search_area{
                 position: absolute;
                 left: 268px;
-                margin-top: -55px;
+                margin-top: -66px;
             }
             .search_area .input_text{
                 width: 444px;
-                height: 24px;
-                padding: 13px 15px;
+                padding:13px 15px 13px 15px;
                 margin: 1px;
                 background-color: #fff;
                 font-size: 18px;
-                line-height: 24px;
                 color: #000;
                 font-weight: 700;
                 outline: 0;
+                border: none;
             }
             .search_area .btn_submit{
                 position: absolute;
@@ -73,45 +66,95 @@
                 right: 0;
                 bottom: 0;
                 width: 56px;
+                border: 0px;
                 background-color: #19ce60;
                 border-radius: 0 2px 2px 0;
                 cursor: pointer;
             }
+            .search_area .green_window{
+                position: relative;
+                width: 582px;
+                height: 52px;
+                border: 2px solid #19ce60;
+                border-radius: 2px;
+            }
+            .search_area .btn_submit .ico_search_submit{
+                background-image:url(https://s.pstatic.net/static/www/img/uit/sp_main_dba1af.png);
+                display: inline-block;
+                width: 22px;
+                height: 22px;
+                background-position: -420px 0;
+                background-repeat: no-repeat;
+                vertical-align: top;
+                background-size: 457px 434px;
+            }
+            .blind{
+                position: absolute;
+                clip: rect(0 0 0 0);
+                width: 1px;
+                margin: -1px;
+                height: 1px;
+                overflow: hidden;
+            }
+            .group_flex{
+                position: relative;
+                width: 1130px;
+                height: 100%;
+                margin: 0 auto;
+                padding: 0 30px;
+            }
+            .special_bg{
+                position: relative;
+                background-color: #fff;
+                border-bottom: 1px solid #e4e9eb;
+            }
+            .gnb_inner{
+                position: relative;
+                width: 1130px;
+                padding: 0 30px;
+            }
         </style>
     </head>
     <body>
-        <div>
-            <div class="logo_area">
-                <a href="clone_naver.html">
-                    <h1 class="logo"></h1>
-                </a>
-            </div>
-            <div class="search_area" id="search">
-                <input type="text" maxlength="225" class="input_text" placeholder="검색어를 입력해주세요."
-                >
-                <button>
-                    <i class="btn_submit"></i>
-                </button>
+        <div class="special_bg">
+            <div class="group_flex">
+                <div class="logo_area">
+                    <a href="clone_naver.html">
+                        <h1 class="logo"></h1>
+                    </a>
+                </div>
+                <div class="search_area" id="search">
+                    <div class="green_window">
+                        <input type="text" maxlength="225" class="input_text" placeholder="검색어를 입력해주세요.">
+                    </div>
+                    <button class="btn_submit">
+                        <span class="blind">검색</span>
+                        <span class="ico_search_submit"></span>
+                    </button>
+
+                </div>
             </div>
         </div>
-        <div class="group_nav">
-            <ul>
-                <li class="nav_list">메일</li>
-                <li class="nav_list">카페</li>
-                <li class="nav_list">블로그</li>
-                <li class="nav_list">지식iN</li>
-                <li class="nav_list">쇼핑</li>
-            </ul>
-            <ul>
-                <li class="nav_list_2">사전</li>
-                <li class="nav_list_2">뉴스</li>
-                <li class="nav_list_2">증권</li>
-                <li class="nav_list_2">부동산</li>
-                <li class="nav_list_2">지도</li>
-                <li class="nav_list_2">VIBE</li>
-                <li class="nav_list_2">책</li>
-                <li class="nav_list_2">웹툰</li>
-            </ul>
+        <div id="gnb">
+            <div class="gnb_inner">
+                <ul>
+                    <li class="nav_list">메일</li>
+                    <li class="nav_list">카페</li>
+                    <li class="nav_list">블로그</li>
+                    <li class="nav_list">지식iN</li>
+                    <li class="nav_list">쇼핑</li>
+                </ul>
+                <ul>
+                    <li class="nav_list_2">사전</li>
+                    <li class="nav_list_2">뉴스</li>
+                    <li class="nav_list_2">증권</li>
+                    <li class="nav_list_2">부동산</li>
+                    <li class="nav_list_2">지도</li>
+                    <li class="nav_list_2">VIBE</li>
+                    <li class="nav_list_2">책</li>
+                    <li class="nav_list_2">웹툰</li>
+                </ul>
+            </div>
         </div>       
     </body>
 </html>
